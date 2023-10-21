@@ -122,7 +122,6 @@ let autosimi = JSON.parse(fs.readFileSync('./src/data/simi.json'))
 let ntlinkgc =JSON.parse(fs.readFileSync('./database/antilinkgc.json'));
 let ntlinkgc2 =JSON.parse(fs.readFileSync('./database/antilinkgc2.json'));
 
-const banned = JSON.parse(fs.readFileSync('./database/banned.json'))
 /* ~~~~~~~~~ DATA MEDIA ~~~~~~~~~ */
 const Vnsfbot = JSON.parse(fs.readFileSync('./src/media/vn.json'))
 const Stickersfbot = JSON.parse(fs.readFileSync('./src/media/sticker.json'))
@@ -229,7 +228,7 @@ module.exports = sfbot = async (sfbot, m, msg, chatUpdate, store) => {
         const isPremium = isCreator || isCreator || checkPremiumUser(m.sender, premium);
         const isUser = _user.includes(m.sender)
         expiredCheck(sfbot, m, premium);
-        const isBan = banned.includes(m.sender)
+        
         /* ~~~~~~~ OBFUSCATE ~~~~~~~ */
         
         /* ~~~~~~~~~ REPLY ~~~~~~~~~ */

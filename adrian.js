@@ -2,6 +2,7 @@
    Created By sfbotDev
    My Contact wa.me/6289513081052
 */
+console.log('mulaii')
 
 require('./settings')
 const pino = require('pino')
